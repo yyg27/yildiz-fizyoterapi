@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Sağlıklı ve Ağrısız Bir Yaşam İçin Doğru Adrestesiniz",
+    "subtitle": "Uzman fizyoterapist eşliğinde, size özel tedavi ve egzersiz programlarıyla yaşam kalitenizi artırın.",
+    "ctaText": "WhatsApp'tan Bilgi Al"
+  },
+  "services": [
+    {
+      "id": 1,
+      "title": "Manuel Terapi",
+      "description": "Eklem ve kas ağrılarınızı hafifletmek için ellerle uygulanan özel tedavi yöntemleri."
+    },
+    {
+      "id": 2,
+      "title": "Klinik Pilates",
+      "description": "Omurga sağlığını korumak ve kasları güçlendirmek için kişiye özel, aletli pilates egzersizleri."
+    },
+    {
+      "id": 3,
+      "title": "Kuru İğneleme",
+      "description": "Kas spazmlarını çözmek ve ağrıları gidermek için kullanılan etkili bir fizik tedavi yöntemi."
+    }
+  ],
+  "contact": {
+    "phone": "+900000000000",
+    "email": "ornek@eposta.com",
+    "whatsappMessage": "Merhaba, randevu ve seans ücretleri hakkında bilgi almak istiyorum."
+  }
+}
