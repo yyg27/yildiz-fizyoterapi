@@ -63,7 +63,7 @@ export default function Home() {
           <div className="hero-visual">
             <div className="photo-frame">
               <div className="photo-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.2-2h5.6L16 5"/></svg>
+                <img src="/icons/placeholder.svg" alt="" style={{ width: 44, height: 44, opacity: 0.5 }} />
                 <span>Doktor fotoğrafı buraya eklenecek</span>
               </div>
               <div className="photo-tag"><strong>Dr. Fzt. Nur Sinem Yıldız</strong>Fizyoterapi ve Rehabilitasyon Uzmanı</div>
@@ -80,22 +80,22 @@ export default function Home() {
           </div>
           <div className="service-grid">
             <div className="service-card">
-              <svg className="icon" viewBox="0 0 40 40" fill="none"><path d="M20 4v10M20 26v10M4 20h10M26 20h10" stroke="#e39ba2" strokeWidth="2" strokeLinecap="round"/><circle cx="20" cy="20" r="6" stroke="#8a9686" strokeWidth="2"/></svg>
+              <img src="/icons/ortho.svg" alt="Ortopedi" className="icon" />
               <h3>Ortopedik Rehabilitasyon</h3>
               <p>Ameliyat sonrası ve eklem, kas iskelet sistemi problemlerinde iyileşme sürecinizi hızlandırıyoruz.</p>
             </div>
             <div className="service-card">
-              <svg className="icon" viewBox="0 0 40 40" fill="none"><path d="M8 30 L18 14 L24 22 L32 8" stroke="#8a9686" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <img src="/icons/sports.svg" alt="Spor" className="icon" />
               <h3>Spor Yaralanmaları</h3>
               <p>Sahaya veya salona güvenle dönmeniz için performans odaklı, aşamalı iyileşme programları.</p>
             </div>
             <div className="service-card">
-              <svg className="icon" viewBox="0 0 40 40" fill="none"><path d="M10 20 Q 20 8, 30 20 Q 20 32, 10 20 Z" stroke="#e39ba2" strokeWidth="2"/></svg>
+              <img src="/icons/manual.svg" alt="Manuel Terapi" className="icon" />
               <h3>Manuel Terapi</h3>
               <p>Elle uygulanan tekniklerle eklem hareketliliğini ve doku esnekliğini geri kazandırıyoruz.</p>
             </div>
             <div className="service-card">
-              <svg className="icon" viewBox="0 0 40 40" fill="none"><path d="M6 24 C 12 12, 18 32, 24 20 C 28 12, 32 18, 34 14" stroke="#8a9686" strokeWidth="2" strokeLinecap="round"/></svg>
+              <img src="/icons/neuro.svg" alt="Nöroloji" className="icon" />
               <h3>Nörolojik Rehabilitasyon</h3>
               <p>İnme ve nörolojik rahatsızlıklar sonrası denge, koordinasyon ve bağımsız hareket kazanımı.</p>
             </div>
@@ -228,7 +228,7 @@ export default function Home() {
       </footer>
 
       <a className="wa-float" href="https://wa.me/905555550123?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geç">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1 4.1 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3z" fill="#fff"/><path d="M16 5C10.1 5 5.3 9.8 5.3 15.7c0 2.2.6 4.2 1.7 6L6 26l4.5-1.4c1.7 1 3.6 1.5 5.5 1.5 5.9 0 10.7-4.8 10.7-10.7C26.7 9.8 21.9 5 16 5z" fill="#25D366"/><path d="M12.3 10.4c-.3-.6-.6-.6-.9-.6h-.7c-.3 0-.7.1-1 .5-.3.4-1.3 1.2-1.3 3 0 1.8 1.3 3.5 1.5 3.7.2.3 2.5 4 6.2 5.4 3.1 1.2 3.7 1 4.4.9.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.4-.3-.7-.5-.3-.2-2.1-1-2.4-1.2-.3-.1-.6-.2-.8.2-.3.4-.9 1.2-1.1 1.4-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.4-.2-.4 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7z" fill="#fff"/></svg>
+        <img src="/icons/whatsapp.svg" alt="WhatsApp" style={{ width: 30, height: 30 }} />
       </a>
     </>
   );
