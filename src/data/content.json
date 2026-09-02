@@ -3,17 +3,18 @@
     "eyebrow": "Fzt. Nursinem Yıldız",
     "titleStart": "Sizi ",
     "titleHighlight": "dinleyerek",
-    "titleEnd": " başlayan, kişiye özel bir tedavi süreci",
-    "description": "Ortopedik, sportif ve nörolojik rehabilitasyon alanlarında yıllardır edindiğim tecrübeyle her danışanıma özel bir program oluşturuyorum. Amacım sadece ağrınızı dindirmek değil, hareketinizi kalıcı olarak geri kazandırmak.",
+    "titleEnd": " başlayan, kişiye özel bir süreç",
+    "description": "Fizik tedavi ve rehabilitasyon alanında edindiğim tecrübeyle her danışanıma özel bir program oluşturuyorum. Amacım sadece ağrınızı dindirmek değil, hareketinizi kalıcı olarak geri kazandırmak.",
     "badges": [
-      "Fizyoterapist",
+      "Fizyoterapi",
       "Ortopedik Rehabilitasyon",
-      "Manuel Terapi Sertifikalı"
+      "Manuel Terapi",
+      "Reformer & Mat Pilates"
     ]
   },
   "services": {
     "label": "Hizmetlerimiz",
-    "title": "Her vücut farklı, her tedavi de öyle olmalı",
+    "title": "Her vücut farklı, her program da öyle olmalı",
     "items": [
       {
         "id": "ortopedik",
@@ -38,6 +39,30 @@
         "icon": "/icons/neuro.svg",
         "title": "Nörolojik Rehabilitasyon",
         "description": "İnme ve nörolojik rahatsızlıklar sonrası denge, koordinasyon ve bağımsız hareket kazanımı."
+      },
+      {
+        "id": "reformer-pilates",
+        "icon": "/icons/neuro.svg",
+        "title": "Reformer Pilates",
+        "description": "Reformer aletiyle yapılan, kasları güçlendiren ve vücut farkındalığını artıran pilates seansları."
+      },
+      {
+        "id": "mat-pilates",
+        "icon": "/icons/neuro.svg",
+        "title": "Mat Pilates",
+        "description": "Mat üzerinde yapılan, kasları güçlendiren ve vücut farkındalığını artıran pilates seansları."
+      },
+      {
+        "id": "klinik-masaj",
+        "icon": "/icons/neuro.svg",
+        "title": "Klinik Masaj",
+        "description": "Profesyonel masaj teknikleriyle kas gerginliğini ve ağrıları hafifletiyoruz."
+      },
+      {
+        "id": "klinik-egzersiz",
+        "icon": "/icons/neuro.svg",
+        "title": "Klinik Egzersiz",
+        "description": "Profesyonel egzersiz programlarıyla hareket yeteneğinizi ve dayanıklılığınızı artırıyoruz."
       }
     ]
   },
@@ -74,16 +99,16 @@
   "contact": {
     "address": "Karacaoğlan, 11119 Sk. Zemin Kat No:2AB, Kozan/Adana",
     "phone": "0543 631 5957",
-    "hours": "Pazartesi–Cumartesi, 09:00–19:00",
+    "hours": "Pazartesi–Cuma, 09:00–19:00, Cumartesi, 09:00–17:00",
     "email": "fzt.nursinemyildiz@gmail.com",
     "whatsappPhone": "905436315957",
     "whatsappMessage": "Merhaba, randevu almak istiyorum"
   },
   "testimonial": {
     "quote": "Diz ameliyatından sonra tekrar koşabileceğimi düşünmüyordum. Yıldız'daki programla üç ayda sahalara döndüm.",
-    "author": "Emre K., Danışan"
+    "author": "Oğuzhan V., Danışan"
   },
   "footer": {
-    "description": "Kişiye özel fizyoterapi ve rehabilitasyon programlarıyla hareket özgürlüğünüzü yeniden kazanın."
+    "description": "Bu sitedeki yazılar tamamen bilgilendirme amaçlıdır. Tıbbi teşhis ve tedavi olarak kullanılmamalıdır."
   }
 }
