@@ -1,29 +1,89 @@
 {
   "hero": {
-    "title": "Sağlıklı ve Ağrısız Bir Yaşam İçin Doğru Adrestesiniz",
-    "subtitle": "Uzman fizyoterapist eşliğinde, size özel tedavi ve egzersiz programlarıyla yaşam kalitenizi artırın.",
-    "ctaText": "WhatsApp'tan Bilgi Al"
+    "eyebrow": "Fzt. Nursinem Yıldız",
+    "titleStart": "Sizi ",
+    "titleHighlight": "dinleyerek",
+    "titleEnd": " başlayan, kişiye özel bir tedavi süreci",
+    "description": "Ortopedik, sportif ve nörolojik rehabilitasyon alanlarında yıllardır edindiğim tecrübeyle her danışanıma özel bir program oluşturuyorum. Amacım sadece ağrınızı dindirmek değil, hareketinizi kalıcı olarak geri kazandırmak.",
+    "badges": [
+      "Fizyoterapist",
+      "Ortopedik Rehabilitasyon",
+      "Manuel Terapi Sertifikalı"
+    ]
   },
-  "services": [
-    {
-      "id": 1,
-      "title": "Manuel Terapi",
-      "description": "Eklem ve kas ağrılarınızı hafifletmek için ellerle uygulanan özel tedavi yöntemleri."
-    },
-    {
-      "id": 2,
-      "title": "Klinik Pilates",
-      "description": "Omurga sağlığını korumak ve kasları güçlendirmek için kişiye özel, aletli pilates egzersizleri."
-    },
-    {
-      "id": 3,
-      "title": "Kuru İğneleme",
-      "description": "Kas spazmlarını çözmek ve ağrıları gidermek için kullanılan etkili bir fizik tedavi yöntemi."
-    }
-  ],
+  "services": {
+    "label": "Hizmetlerimiz",
+    "title": "Her vücut farklı, her tedavi de öyle olmalı",
+    "items": [
+      {
+        "id": "ortopedik",
+        "icon": "/icons/ortho.svg",
+        "title": "Ortopedik Rehabilitasyon",
+        "description": "Ameliyat sonrası ve eklem, kas iskelet sistemi problemlerinde iyileşme sürecinizi hızlandırıyoruz."
+      },
+      {
+        "id": "spor",
+        "icon": "/icons/sports.svg",
+        "title": "Spor Yaralanmaları",
+        "description": "Sahaya veya salona güvenle dönmeniz için performans odaklı, aşamalı iyileşme programları."
+      },
+      {
+        "id": "manuel",
+        "icon": "/icons/manual.svg",
+        "title": "Manuel Terapi",
+        "description": "Elle uygulanan tekniklerle eklem hareketliliğini ve doku esnekliğini geri kazandırıyoruz."
+      },
+      {
+        "id": "norolojik",
+        "icon": "/icons/neuro.svg",
+        "title": "Nörolojik Rehabilitasyon",
+        "description": "İnme ve nörolojik rahatsızlıklar sonrası denge, koordinasyon ve bağımsız hareket kazanımı."
+      }
+    ]
+  },
+  "approach": {
+    "title": "Süreç nasıl işliyor",
+    "description": "İlk görüşmeden takip seansına kadar her adımda size özel bir yol haritası izliyoruz.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Değerlendirme",
+        "description": "Ağrınızı, hareket kısıtlılığınızı ve günlük yaşamınızı etkileyen faktörleri birlikte inceliyoruz."
+      },
+      {
+        "num": "02",
+        "title": "Kişisel program",
+        "description": "Değerlendirme sonuçlarına göre hedeflerinize uygun bir tedavi planı oluşturuyoruz."
+      },
+      {
+        "num": "03",
+        "title": "Tedavi",
+        "description": "Manuel terapi, egzersiz ve gerektiğinde elektroterapi yöntemlerini bir arada uyguluyoruz."
+      },
+      {
+        "num": "04",
+        "title": "Takip",
+        "description": "İlerlemenizi düzenli olarak ölçüp programı gerektiğinde yeniden şekillendiriyoruz."
+      }
+    ]
+  },
+  "booking": {
+    "title": "Randevunuzu oluşturun",
+    "description": "Formu doldurun, size en kısa sürede dönüş yapıp uygun seans saatini birlikte belirleyelim."
+  },
   "contact": {
-    "phone": "+900000000000",
-    "email": "ornek@eposta.com",
-    "whatsappMessage": "Merhaba, randevu ve seans ücretleri hakkında bilgi almak istiyorum."
+    "address": "Karacaoğlan, 11119 Sk. Zemin Kat No:2AB, Kozan/Adana",
+    "phone": "0543 631 5957",
+    "hours": "Pazartesi–Cumartesi, 09:00–19:00",
+    "email": "fzt.nursinemyildiz@gmail.com",
+    "whatsappPhone": "905436315957",
+    "whatsappMessage": "Merhaba, randevu almak istiyorum"
+  },
+  "testimonial": {
+    "quote": "Diz ameliyatından sonra tekrar koşabileceğimi düşünmüyordum. Yıldız'daki programla üç ayda sahalara döndüm.",
+    "author": "Emre K., Danışan"
+  },
+  "footer": {
+    "description": "Kişiye özel fizyoterapi ve rehabilitasyon programlarıyla hareket özgürlüğünüzü yeniden kazanın."
   }
 }

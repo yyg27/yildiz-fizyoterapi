@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
+import content from '../data/content.json';
 
 export default function Home() {
   const adRef = useRef<HTMLInputElement>(null);
@@ -24,7 +25,7 @@ export default function Home() {
       + '\nTercih edilen tarih: ' + tarih
       + '\nNot: ' + notVal;
       
-    window.location.href = 'mailto:info@yildizfizyoterapi.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = `mailto:${content.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -47,13 +48,13 @@ export default function Home() {
       <section>
         <div className="wrap hero" style={{ padding: '96px 32px 100px' }}>
           <div>
-            <div className="hero-eyebrow">Dr. Fzt. Nur Sinem Yıldız</div>
-            <h1>Sizi <em>dinleyerek</em> başlayan, kişiye özel bir tedavi süreci</h1>
-            <p>Ortopedik, sportif ve nörolojik rehabilitasyon alanlarında yıllardır edindiğim tecrübeyle her danışanıma özel bir program oluşturuyorum. Amacım sadece ağrınızı dindirmek değil, hareketinizi kalıcı olarak geri kazandırmak.</p>
+            <div className="hero-eyebrow">{content.hero.eyebrow}</div>
+            <h1>{content.hero.titleStart}<em>{content.hero.titleHighlight}</em>{content.hero.titleEnd}</h1>
+            <p>{content.hero.description}</p>
             <div className="hero-badges">
-              <span className="hero-badge">Fizyoterapist</span>
-              <span className="hero-badge">Ortopedik Rehabilitasyon</span>
-              <span className="hero-badge">Manuel Terapi Sertifikalı</span>
+              {content.hero.badges.map((badge, index) => (
+                <span key={index} className="hero-badge">{badge}</span>
+              ))}
             </div>
             <div className="hero-ctas">
               <a href="#randevu" className="btn btn-primary">Randevu al</a>
@@ -66,7 +67,7 @@ export default function Home() {
                 <img src="/icons/placeholder.svg" alt="" style={{ width: 44, height: 44, opacity: 0.5 }} />
                 <span>Doktor fotoğrafı buraya eklenecek</span>
               </div>
-              <div className="photo-tag"><strong>Dr. Fzt. Nur Sinem Yıldız</strong>Fizyoterapi ve Rehabilitasyon Uzmanı</div>
+              <div className="photo-tag"><strong>{content.hero.eyebrow}</strong>Fizyoterapi ve Rehabilitasyon Uzmanı</div>
             </div>
           </div>
         </div>
@@ -75,30 +76,17 @@ export default function Home() {
       <section className="services" id="hizmetler">
         <div className="wrap">
           <div className="section-head">
-            <div className="section-label">Hizmetlerimiz</div>
-            <h2>Her vücut farklı, her tedavi de öyle olmalı</h2>
+            <div className="section-label">{content.services.label}</div>
+            <h2>{content.services.title}</h2>
           </div>
           <div className="service-grid">
-            <div className="service-card">
-              <img src="/icons/ortho.svg" alt="Ortopedi" className="icon" />
-              <h3>Ortopedik Rehabilitasyon</h3>
-              <p>Ameliyat sonrası ve eklem, kas iskelet sistemi problemlerinde iyileşme sürecinizi hızlandırıyoruz.</p>
-            </div>
-            <div className="service-card">
-              <img src="/icons/sports.svg" alt="Spor" className="icon" />
-              <h3>Spor Yaralanmaları</h3>
-              <p>Sahaya veya salona güvenle dönmeniz için performans odaklı, aşamalı iyileşme programları.</p>
-            </div>
-            <div className="service-card">
-              <img src="/icons/manual.svg" alt="Manuel Terapi" className="icon" />
-              <h3>Manuel Terapi</h3>
-              <p>Elle uygulanan tekniklerle eklem hareketliliğini ve doku esnekliğini geri kazandırıyoruz.</p>
-            </div>
-            <div className="service-card">
-              <img src="/icons/neuro.svg" alt="Nöroloji" className="icon" />
-              <h3>Nörolojik Rehabilitasyon</h3>
-              <p>İnme ve nörolojik rahatsızlıklar sonrası denge, koordinasyon ve bağımsız hareket kazanımı.</p>
-            </div>
+            {content.services.items.map((item) => (
+              <div key={item.id} className="service-card">
+                <img src={item.icon} alt={item.title} className="icon" />
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -106,38 +94,19 @@ export default function Home() {
       <section className="approach" id="yaklasim">
         <div className="wrap approach-grid">
           <div>
-            <h2>Süreç nasıl işliyor</h2>
-            <p>İlk görüşmeden takip seansına kadar her adımda size özel bir yol haritası izliyoruz.</p>
+            <h2>{content.approach.title}</h2>
+            <p>{content.approach.description}</p>
           </div>
           <div>
-            <div className="step">
-              <div className="step-num">01</div>
-              <div>
-                <h4>Değerlendirme</h4>
-                <p>Ağrınızı, hareket kısıtlılığınızı ve günlük yaşamınızı etkileyen faktörleri birlikte inceliyoruz.</p>
+            {content.approach.steps.map((step) => (
+              <div key={step.num} className="step">
+                <div className="step-num">{step.num}</div>
+                <div>
+                  <h4>{step.title}</h4>
+                  <p>{step.description}</p>
+                </div>
               </div>
-            </div>
-            <div className="step">
-              <div className="step-num">02</div>
-              <div>
-                <h4>Kişisel program</h4>
-                <p>Değerlendirme sonuçlarına göre hedeflerinize uygun bir tedavi planı oluşturuyoruz.</p>
-              </div>
-            </div>
-            <div className="step">
-              <div className="step-num">03</div>
-              <div>
-                <h4>Tedavi</h4>
-                <p>Manuel terapi, egzersiz ve gerektiğinde elektroterapi yöntemlerini bir arada uyguluyoruz.</p>
-              </div>
-            </div>
-            <div className="step">
-              <div className="step-num">04</div>
-              <div>
-                <h4>Takip</h4>
-                <p>İlerlemenizi düzenli olarak ölçüp programı gerektiğinde yeniden şekillendiriyoruz.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -145,11 +114,11 @@ export default function Home() {
       <section className="booking" id="randevu">
         <div className="wrap booking-grid">
           <div>
-            <h2>Randevunuzu oluşturun</h2>
-            <p>Formu doldurun, size en kısa sürede dönüş yapıp uygun seans saatini birlikte belirleyelim.</p>
-            <div className="contact-line">📍 Bağdat Caddesi No:24, İstanbul</div>
-            <div className="contact-line">📞 0212 555 01 23</div>
-            <div className="contact-line">🕐 Pazartesi–Cumartesi, 09:00–19:00</div>
+            <h2>{content.booking.title}</h2>
+            <p>{content.booking.description}</p>
+            <div className="contact-line">📍 {content.contact.address}</div>
+            <div className="contact-line">📞 {content.contact.phone}</div>
+            <div className="contact-line">🕐 {content.contact.hours}</div>
           </div>
           <div className="form-card">
             <div className="form-row">
@@ -166,10 +135,9 @@ export default function Home() {
               <div className="field">
                 <label htmlFor="hizmet">Hizmet</label>
                 <select id="hizmet" ref={hizmetRef}>
-                  <option>Ortopedik Rehabilitasyon</option>
-                  <option>Spor Yaralanmaları</option>
-                  <option>Manuel Terapi</option>
-                  <option>Nörolojik Rehabilitasyon</option>
+                  {content.services.items.map(item => (
+                    <option key={item.id}>{item.title}</option>
+                  ))}
                 </select>
               </div>
               <div className="field">
@@ -191,8 +159,8 @@ export default function Home() {
 
       <section className="testimonial">
         <div className="wrap">
-          <blockquote>“Diz ameliyatından sonra tekrar koşabileceğimi düşünmüyordum. Yıldız'daki programla üç ayda sahalara döndüm.”</blockquote>
-          <cite>— Emre K., Danışan</cite>
+          <blockquote>“{content.testimonial.quote}”</blockquote>
+          <cite>— {content.testimonial.author}</cite>
         </div>
       </section>
 
@@ -201,7 +169,7 @@ export default function Home() {
           <div className="footer-grid">
             <div>
               <h5>Yıldız<span style={{ color: '#f4c2c6' }}>.</span></h5>
-              <p style={{ maxWidth: '280px', fontSize: '14px', color: 'rgba(253,252,250,0.6)', marginTop: '8px' }}>Kişiye özel fizyoterapi ve rehabilitasyon programlarıyla hareket özgürlüğünüzü yeniden kazanın.</p>
+              <p style={{ maxWidth: '280px', fontSize: '14px', color: 'rgba(253,252,250,0.6)', marginTop: '8px' }}>{content.footer.description}</p>
             </div>
             <div>
               <h6>Menü</h6>
@@ -214,9 +182,9 @@ export default function Home() {
             <div>
               <h6>İletişim</h6>
               <div className="foot-links">
-                <a href="#">0212 555 01 23</a>
-                <a href="#">info@yildizfizyoterapi.com</a>
-                <a href="#">Bağdat Cad. No:24, İstanbul</a>
+                <a href="#">{content.contact.phone}</a>
+                <a href={`mailto:${content.contact.email}`}>{content.contact.email}</a>
+                <a href="#">{content.contact.address}</a>
               </div>
             </div>
           </div>
@@ -227,7 +195,7 @@ export default function Home() {
         </div>
       </footer>
 
-      <a className="wa-float" href="https://wa.me/905555550123?text=Merhaba%2C%20randevu%20almak%20istiyorum" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geç">
+      <a className="wa-float" href={`https://wa.me/${content.contact.whatsappPhone}?text=${encodeURIComponent(content.contact.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geç">
         <img src="/icons/whatsapp.svg" alt="WhatsApp" style={{ width: 30, height: 30 }} />
       </a>
     </>
