@@ -33,7 +33,7 @@ export default function Home() {
       <header>
         <div className="wrap">
           <nav>
-            <div className="logo">Yıldız<span>.</span></div>
+            <div className="logo">Fizyoterapist <span>Nursinem Yıldız</span></div>
             <div className="nav-links">
               <a href="#hizmetler">Hizmetler</a>
               <a href="#yaklasim">Yaklaşımımız</a>
@@ -63,11 +63,8 @@ export default function Home() {
           </div>
           <div className="hero-visual">
             <div className="photo-frame">
-              <div className="photo-placeholder">
-                <img src="/icons/placeholder.svg" alt="" style={{ width: 44, height: 44, opacity: 0.5 }} />
-                <span>Doktor fotoğrafı buraya eklenecek</span>
-              </div>
-              <div className="photo-tag"><strong>{content.hero.eyebrow}</strong>Fizyoterapi ve Rehabilitasyon Uzmanı</div>
+              <img src="/icons/Ramona-film-02.jpeg" alt={content.hero.eyebrow} />
+              <div className="photo-tag"><strong>{content.hero.eyebrow}</strong></div>
             </div>
           </div>
         </div>
@@ -140,10 +137,6 @@ export default function Home() {
                   ))}
                 </select>
               </div>
-              <div className="field">
-                <label htmlFor="tarih">Tercih edilen tarih</label>
-                <input id="tarih" type="date" ref={tarihRef} />
-              </div>
             </div>
             <div className="form-row">
               <div className="field full">
@@ -168,7 +161,7 @@ export default function Home() {
         <div className="wrap">
           <div className="footer-grid">
             <div>
-              <h5>Yıldız<span style={{ color: '#f4c2c6' }}>.</span></h5>
+              <h5>Fizyoterapist <span style={{ color: '#f4c2c6' }}>Nursinem Yıldız</span></h5>
               <p style={{ maxWidth: '280px', fontSize: '14px', color: 'rgba(253,252,250,0.6)', marginTop: '8px' }}>{content.footer.description}</p>
             </div>
             <div>
@@ -189,7 +182,7 @@ export default function Home() {
             </div>
           </div>
           <div className="foot-bottom">
-            <span>© 2026 Yıldız Fizyoterapi</span>
+            <span>© Özel Sağlık Meslek Hizmet Birimi Fizyoterapist Nursinem Yıldız</span>
             <span>Tüm hakları saklıdır</span>
           </div>
         </div>
