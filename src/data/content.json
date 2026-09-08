@@ -1,6 +1,8 @@
 {
   "hero": {
     "eyebrow": "Fzt. Nursinem Yıldız",
+    "photoName": "Nursinem Yıldız",
+    "photoTitle": "Fizyoterapist",
     "titleStart": "Sizi ",
     "titleHighlight": "dinleyerek",
     "titleEnd": " başlayan, kişiye özel bir süreç",
@@ -105,8 +107,8 @@
     "whatsappMessage": "Merhaba, randevu almak istiyorum"
   },
   "testimonial": {
-    "quote": "Diz ameliyatından sonra tekrar koşabileceğimi düşünmüyordum. Yıldız'daki programla üç ayda sahalara döndüm.",
-    "author": "Oğuzhan V., Danışan"
+    "quote": "Hareket varsa, yaşam vardır.",
+    "author": "Aristoteles"
   },
   "footer": {
     "description": "Bu sitedeki yazılar tamamen bilgilendirme amaçlıdır. Tıbbi teşhis ve tedavi olarak kullanılmamalıdır."
