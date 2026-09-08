@@ -60,7 +60,7 @@ export default function Home() {
           </div>
           <div className="hero-visual">
             <div className="photo-frame">
-              <img src="/icons/Ramona-film-02.jpeg" alt={content.hero.eyebrow} />
+              <img src="/icons/fzt.jpeg" alt={content.hero.eyebrow} />
               <div className="photo-tag"><strong>{content.hero.eyebrow}</strong></div>
             </div>
           </div>
