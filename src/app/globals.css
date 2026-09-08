@@ -87,12 +87,6 @@ nav{
   display:flex; align-items:center; justify-content:center;
 }
 .photo-frame img{width:100%; height:100%; object-fit:cover; display:block;}
-.photo-placeholder{
-  display:flex; flex-direction:column; align-items:center; gap:10px;
-  color:var(--ink-soft); text-align:center; padding:0 30px;
-}
-.photo-placeholder svg{width:44px; height:44px; opacity:0.5;}
-.photo-placeholder span{font-size:13px;}
 .photo-tag{
   position:absolute; left:18px; bottom:18px;
   background:var(--white); padding:12px 18px; border-radius:2px;
@@ -175,7 +169,6 @@ footer h6{color:var(--white); font-size:14px; font-weight:600; margin-bottom:16p
 }
 .wa-float:hover{transform:scale(1.06);}
 .wa-float:active{transform:scale(0.96);}
-.wa-float svg{width:30px; height:30px;}
 
 @media (max-width: 860px){
   .nav-links{display:none;}

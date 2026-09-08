@@ -7,7 +7,6 @@ export default function Home() {
   const adRef = useRef<HTMLInputElement>(null);
   const telRef = useRef<HTMLInputElement>(null);
   const hizmetRef = useRef<HTMLSelectElement>(null);
-  const tarihRef = useRef<HTMLInputElement>(null);
   const notRef = useRef<HTMLTextAreaElement>(null);
 
   const handleMailTo = (e: React.MouseEvent) => {
@@ -15,14 +14,12 @@ export default function Home() {
     const ad = adRef.current?.value || '-';
     const tel = telRef.current?.value || '-';
     const hizmet = hizmetRef.current?.value || '-';
-    const tarih = tarihRef.current?.value || '-';
     const notVal = notRef.current?.value || '-';
     
     const subject = 'Randevu Talebi - ' + ad;
     const body = 'Ad Soyad: ' + ad
       + '\nTelefon: ' + tel
       + '\nHizmet: ' + hizmet
-      + '\nTercih edilen tarih: ' + tarih
       + '\nNot: ' + notVal;
       
     window.location.href = `mailto:${content.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
