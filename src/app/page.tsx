@@ -9,7 +9,18 @@ export default function Home() {
   const hizmetRef = useRef<HTMLSelectElement>(null);
   const notRef = useRef<HTMLTextAreaElement>(null);
 
-  const handleMailTo = (e: React.MouseEvent) => {
+  const handleWhatsApp = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const ad = adRef.current?.value || '-';
+    const tel = telRef.current?.value || '-';
+    const hizmet = hizmetRef.current?.value || '-';
+    const notVal = notRef.current?.value || '-';
+    
+    const text = `Merhaba, randevu almak istiyorum.\n\n*Ad Soyad:* ${ad}\n*Telefon:* ${tel}\n*Hizmet:* ${hizmet}\n*Not:* ${notVal}`;
+    window.open(`https://wa.me/${content.contact.whatsappPhone}?text=${encodeURIComponent(text)}`, '_blank');
+  };
+
+  const handleEmail = (e: React.MouseEvent) => {
     e.preventDefault();
     const ad = adRef.current?.value || '-';
     const tel = telRef.current?.value || '-';
@@ -43,7 +54,7 @@ export default function Home() {
       </header>
 
       <section>
-        <div className="wrap hero" style={{ padding: '96px 32px 100px' }}>
+        <div className="wrap hero">
           <div>
             <div className="hero-eyebrow">{content.hero.eyebrow}</div>
             <h1>{content.hero.titleStart}<em>{content.hero.titleHighlight}</em>{content.hero.titleEnd}</h1>
@@ -61,7 +72,7 @@ export default function Home() {
           <div className="hero-visual">
             <div className="photo-frame">
               <img src="/icons/fzt.jpeg" alt={content.hero.eyebrow} />
-              <div className="photo-tag"><strong>{content.hero.eyebrow}</strong></div>
+              <div className="photo-tag"><strong>{content.hero.photoName}</strong>{content.hero.photoTitle}</div>
             </div>
           </div>
         </div>
@@ -126,7 +137,7 @@ export default function Home() {
               </div>
             </div>
             <div className="form-row">
-              <div className="field">
+              <div className="field full">
                 <label htmlFor="hizmet">Hizmet</label>
                 <select id="hizmet" ref={hizmetRef}>
                   {content.services.items.map(item => (
@@ -141,8 +152,11 @@ export default function Home() {
                 <textarea id="not" rows={3} placeholder="Şikayetiniz hakkında kısa bilgi verin" ref={notRef}></textarea>
               </div>
             </div>
-            <a href="#" onClick={handleMailTo} className="btn btn-primary" style={{ width: '100%', textAlign: 'center' }}>Randevu talebi gönder</a>
-            <p className="form-note">Butona bastığınızda e-posta uygulamanız, doldurduğunuz bilgilerle birlikte açılır.</p>
+            <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
+              <a href="#" onClick={handleWhatsApp} className="btn btn-whatsapp" style={{ flex: 1, textAlign: 'center' }}>WhatsApp'tan Gönder</a>
+              <a href="#" onClick={handleEmail} className="btn btn-primary" style={{ flex: 1, textAlign: 'center' }}>E-posta ile Gönder</a>
+            </div>
+            <p className="form-note">Butonlardan birine bastığınızda ilgili uygulama formdaki bilgilerle açılır.</p>
           </div>
         </div>
       </section>
