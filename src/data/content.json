@@ -20,49 +20,49 @@
     "items": [
       {
         "id": "ortopedik",
-        "icon": "/icons/ortho.svg",
+        "icon": "/icons/services/ortho.svg",
         "title": "Ortopedik Rehabilitasyon",
         "description": "Ameliyat sonrası ve eklem, kas iskelet sistemi problemlerinde iyileşme sürecinizi hızlandırıyoruz."
       },
       {
         "id": "spor",
-        "icon": "/icons/sports.svg",
+        "icon": "/icons/services/sports.svg",
         "title": "Spor Yaralanmaları",
         "description": "Sahaya veya salona güvenle dönmeniz için performans odaklı, aşamalı iyileşme programları."
       },
       {
         "id": "manuel",
-        "icon": "/icons/manual.svg",
+        "icon": "/icons/services/manual.svg",
         "title": "Manuel Terapi",
         "description": "Elle uygulanan tekniklerle eklem hareketliliğini ve doku esnekliğini geri kazandırıyoruz."
       },
       {
         "id": "norolojik",
-        "icon": "/icons/neuro.svg",
+        "icon": "/icons/services/neuro.svg",
         "title": "Nörolojik Rehabilitasyon",
         "description": "İnme ve nörolojik rahatsızlıklar sonrası denge, koordinasyon ve bağımsız hareket kazanımı."
       },
       {
         "id": "reformer-pilates",
-        "icon": "/icons/neuro.svg",
+        "icon": "/icons/services/pil.refor.svg",
         "title": "Reformer Pilates",
         "description": "Reformer aletiyle yapılan, kasları güçlendiren ve vücut farkındalığını artıran pilates seansları."
       },
       {
         "id": "mat-pilates",
-        "icon": "/icons/neuro.svg",
+        "icon": "/icons/services/pil_mat.svg",
         "title": "Mat Pilates",
         "description": "Mat üzerinde yapılan, kasları güçlendiren ve vücut farkındalığını artıran pilates seansları."
       },
       {
         "id": "klinik-masaj",
-        "icon": "/icons/neuro.svg",
+        "icon": "/icons/services/massage.svg",
         "title": "Klinik Masaj",
         "description": "Profesyonel masaj teknikleriyle kas gerginliğini ve ağrıları hafifletiyoruz."
       },
       {
         "id": "klinik-egzersiz",
-        "icon": "/icons/neuro.svg",
+        "icon": "/icons/services/exercise.svg",
         "title": "Klinik Egzersiz",
         "description": "Profesyonel egzersiz programlarıyla hareket yeteneğinizi ve dayanıklılığınızı artırıyoruz."
       }
