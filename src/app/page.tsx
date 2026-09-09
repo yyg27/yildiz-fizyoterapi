@@ -71,7 +71,7 @@ export default function Home() {
           </div>
           <div className="hero-visual">
             <div className="photo-frame">
-              <img src="/icons/fzt.jpeg" alt={content.hero.eyebrow} />
+              <img src="/photos/fzt.jpeg" alt={content.hero.eyebrow} />
               <div className="photo-tag"><strong>{content.hero.photoName}</strong>{content.hero.photoTitle}</div>
             </div>
           </div>
@@ -118,12 +118,16 @@ export default function Home() {
 
       <section className="booking" id="randevu">
         <div className="wrap booking-grid">
-          <div>
-            <h2>{content.booking.title}</h2>
-            <p>{content.booking.description}</p>
-            <div className="contact-line">📍 {content.contact.address}</div>
-            <div className="contact-line">📞 {content.contact.phone}</div>
-            <div className="contact-line">🕐 {content.contact.hours}</div>
+          <div className="left-column">
+            <div className="booking-header">
+              <h2>{content.booking.title}</h2>
+              <p>{content.booking.description}</p>
+            </div>
+            <div className="contact-lines">
+              <div className="contact-line"><img src="/icons/location.svg" alt="Adres" /> {content.contact.address}</div>
+              <div className="contact-line"><img src="/icons/phone.svg" alt="Telefon" /> {content.contact.phone}</div>
+              <div className="contact-line"><img src="/icons/clock.svg" alt="Çalışma Saatleri" /> {content.contact.hours}</div>
+            </div>
           </div>
           <div className="form-card">
             <div className="form-row">
@@ -152,9 +156,9 @@ export default function Home() {
                 <textarea id="not" rows={3} placeholder="Şikayetiniz hakkında kısa bilgi verin" ref={notRef}></textarea>
               </div>
             </div>
-            <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
-              <a href="#" onClick={handleWhatsApp} className="btn btn-whatsapp" style={{ flex: 1, textAlign: 'center' }}>WhatsApp'tan Gönder</a>
-              <a href="#" onClick={handleEmail} className="btn btn-primary" style={{ flex: 1, textAlign: 'center' }}>E-posta ile Gönder</a>
+            <div className="form-actions">
+              <a href="#" onClick={handleWhatsApp} className="btn btn-whatsapp">WhatsApp'tan Gönder</a>
+              <a href="#" onClick={handleEmail} className="btn btn-primary">E-posta ile Gönder</a>
             </div>
             <p className="form-note">Butonlardan birine bastığınızda ilgili uygulama formdaki bilgilerle açılır.</p>
           </div>
@@ -186,9 +190,9 @@ export default function Home() {
             <div>
               <h6>İletişim</h6>
               <div className="foot-links">
-                <a href="#">{content.contact.phone}</a>
+                <a href={`tel:${content.contact.phone.replace(/\s+/g, '')}`}>{content.contact.phone}</a>
                 <a href={`mailto:${content.contact.email}`}>{content.contact.email}</a>
-                <a href="#">{content.contact.address}</a>
+                <a href="https://maps.google.com/?q=Fizyoterapist+Nursinem+Yıldız+Kozan+Fizik+Tedavi" target="_blank" rel="noopener noreferrer">{content.contact.address}</a>
               </div>
             </div>
           </div>
