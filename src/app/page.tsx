@@ -160,7 +160,7 @@ export default function Home() {
               <a href="#" onClick={handleWhatsApp} className="btn btn-whatsapp">WhatsApp'tan Gönder</a>
               <a href="#" onClick={handleEmail} className="btn btn-primary">E-posta ile Gönder</a>
             </div>
-            <p className="form-note">Butonlardan birine bastığınızda ilgili uygulama formdaki bilgilerle açılır.</p>
+            <p className="form-note">Butonlardan birine tıkladığınızda ilgili uygulama formdaki bilgilerle açılır.</p>
           </div>
         </div>
       </section>
