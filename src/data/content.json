@@ -6,7 +6,7 @@
     "titleStart": "Sizi ",
     "titleHighlight": "dinleyerek",
     "titleEnd": " başlayan, kişiye özel bir süreç",
-    "description": "Fizik tedavi ve rehabilitasyon alanında edindiğim tecrübeyle her danışanıma özel bir program oluşturuyorum. Amacım sadece ağrınızı dindirmek değil, hareketinizi kalıcı olarak geri kazandırmak.",
+    "description": "Fizik tedavi ve rehabilitasyon alanında edindiğim tecrübeyle her danışanıma özel bir program oluşturuyorum. Amacım ağrı şikayetlerinizi azaltmaya ve hareket kabiliyetinize en üst düzeyde destek olmak.",
     "badges": [
       "Fizyoterapi",
       "Ortopedik Rehabilitasyon",
@@ -22,7 +22,7 @@
         "id": "ortopedik",
         "icon": "/icons/services/ortho.svg",
         "title": "Ortopedik Rehabilitasyon",
-        "description": "Ameliyat sonrası ve eklem, kas iskelet sistemi problemlerinde iyileşme sürecinizi hızlandırıyoruz."
+        "description": "Ameliyat sonrası ve eklem, kas iskelet sistemi problemlerinde iyileşme sürecinizi destekliyoruz."
       },
       {
         "id": "spor",
@@ -57,13 +57,13 @@
       {
         "id": "klinik-masaj",
         "icon": "/icons/services/massage.svg",
-        "title": "Klinik Masaj",
+        "title": "Medikal Masaj",
         "description": "Profesyonel masaj teknikleriyle kas gerginliğini ve ağrıları hafifletiyoruz."
       },
       {
         "id": "klinik-egzersiz",
         "icon": "/icons/services/exercise.svg",
-        "title": "Klinik Egzersiz",
+        "title": "Terapötik Egzersiz",
         "description": "Profesyonel egzersiz programlarıyla hareket yeteneğinizi ve dayanıklılığınızı artırıyoruz."
       }
     ]
@@ -80,12 +80,12 @@
       {
         "num": "02",
         "title": "Kişisel program",
-        "description": "Değerlendirme sonuçlarına göre hedeflerinize uygun bir tedavi planı oluşturuyoruz."
+        "description": "Değerlendirme sonuçlarına göre hedeflerinize uygun bir fizyoterapi programı oluşturuyoruz."
       },
       {
         "num": "03",
-        "title": "Tedavi",
-        "description": "Manuel terapi, egzersiz ve gerektiğinde elektroterapi yöntemlerini bir arada uyguluyoruz."
+        "title": "Uygulama",
+        "description": "Planlanan program doğrultusunda manuel terapi, egzersiz ve fizyoterapi yöntemlerini bir arada uyguluyoruz."
       },
       {
         "num": "04",
