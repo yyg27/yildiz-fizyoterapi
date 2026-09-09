@@ -3,10 +3,10 @@
     "eyebrow": "Fzt. Nursinem Yıldız",
     "photoName": "Nursinem Yıldız",
     "photoTitle": "Fizyoterapist",
-    "titleStart": "Sizi ",
-    "titleHighlight": "dinleyerek",
-    "titleEnd": " başlayan, kişiye özel bir süreç",
-    "description": "Fizik tedavi ve rehabilitasyon alanında edindiğim tecrübeyle her danışanıma özel bir program oluşturuyorum. Amacım ağrı şikayetlerinizi azaltmaya ve hareket kabiliyetinize en üst düzeyde destek olmak.",
+    "titleStart": "Bireysel değerlendirmeye dayalı ",
+    "titleHighlight": "fizyoterapi",
+    "titleEnd": " ve rehabilitasyon hizmeti",
+    "description": "Fizik tedavi ve rehabilitasyon alanında, her danışan için ayrı değerlendirme yapılarak bireysel bir çalışma planı oluşturulur. Sunulan hizmetler ortopedik rehabilitasyon, manuel terapi ve pilates uygulamalarını kapsar.",
     "badges": [
       "Fizyoterapi",
       "Ortopedik Rehabilitasyon",
@@ -16,7 +16,7 @@
   },
   "services": {
     "label": "Hizmetlerimiz",
-    "title": "Her vücut farklı, her program da öyle olmalı",
+    "title": "Sunulan fizyoterapi hizmetleri",
     "items": [
       {
         "id": "ortopedik",
@@ -28,7 +28,7 @@
         "id": "spor",
         "icon": "/icons/services/sports.svg",
         "title": "Spor Yaralanmaları",
-        "description": "Sahaya veya salona güvenle dönmeniz için performans odaklı, aşamalı iyileşme programları."
+        "description": "Spor sonrası yaralanmalarda, bireysel değerlendirmeye dayalı, aşamalı çalışma programları uygulanır."
       },
       {
         "id": "manuel",
@@ -40,7 +40,7 @@
         "id": "norolojik",
         "icon": "/icons/services/neuro.svg",
         "title": "Nörolojik Rehabilitasyon",
-        "description": "İnme ve nörolojik rahatsızlıklar sonrası denge, koordinasyon ve bağımsız hareket kazanımı."
+        "description": "Nörolojik rahatsızlıklara bağlı denge ve koordinasyon problemlerinde fizyoterapi desteği sunulur."
       },
       {
         "id": "reformer-pilates",
@@ -111,6 +111,8 @@
     "author": "Aristoteles"
   },
   "footer": {
-    "description": "Bu sitedeki yazılar tamamen bilgilendirme amaçlıdır. Tıbbi teşhis ve tedavi olarak kullanılmamalıdır."
+    "description": "Bu sitedeki yazılar tamamen bilgilendirme amaçlıdır. Tıbbi teşhis ve tedavi olarak kullanılmamalıdır.",
+    "editorInfo": "Site içeriğinden sorumlu: Fzt. Nursinem Yıldız — fzt.nursinemyildiz@gmail.com",
+    "developerCredit": "Bu site Yusuf Yiğit tarafından geliştirilmiştir."
   }
 }

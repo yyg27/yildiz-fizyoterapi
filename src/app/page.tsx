@@ -198,9 +198,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="foot-bottom">
-            <span>© Özel Sağlık Meslek Hizmet Birimi Fizyoterapist Nursinem Yıldız</span>
-            <span>Tüm hakları saklıdır</span>
+          <div className="foot-bottom" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', flexWrap: 'wrap', gap: '12px' }}>
+              <span>Son güncelleme: {new Date().toLocaleDateString('tr-TR')}</span>
+              <span>{content.footer.editorInfo}</span>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', flexWrap: 'wrap', gap: '12px' }}>
+              <span>© Özel Sağlık Meslek Hizmet Birimi Fizyoterapist Nursinem Yıldız</span>
+              <span>Tüm hakları saklıdır</span>
+            </div>
           </div>
         </div>
       </footer>
