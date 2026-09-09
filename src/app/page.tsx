@@ -41,7 +41,9 @@ export default function Home() {
       <header>
         <div className="wrap">
           <nav>
-            <div className="logo">Fizyoterapist <span>Nursinem Yıldız</span></div>
+            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo(0, 0); }} className="logo">
+              <img src="/logos/sinem-full.svg" alt="Fizyoterapist Nursinem Yıldız" className="header-img" />
+            </a>
             <div className="nav-links">
               <a href="#hizmetler">Hizmetler</a>
               <a href="#yaklasim">Yaklaşımımız</a>
@@ -176,8 +178,8 @@ export default function Home() {
         <div className="wrap">
           <div className="footer-grid">
             <div>
-              <h5>Fizyoterapist <span style={{ color: '#f4c2c6' }}>Nursinem Yıldız</span></h5>
-              <p style={{ maxWidth: '280px', fontSize: '14px', color: 'rgba(253,252,250,0.6)', marginTop: '8px' }}>{content.footer.description}</p>
+              <img src="/logos/sinem-full-white.svg" alt="Fizyoterapist Nursinem Yıldız" className="footer-img" />
+              <p style={{ maxWidth: '280px', fontSize: '14px', color: 'rgba(253,252,250,0.6)' }}>{content.footer.description}</p>
             </div>
             <div>
               <h6>Menü</h6>
