@@ -1,56 +1,48 @@
-"use client";
+import content from "@/data/content.json";
+import BookingForm from "@/components/BookingForm";
+import MobileNav from "@/components/MobileNav";
 
-import React, { useRef } from 'react';
-import content from '../data/content.json';
+// Server component: rendered to static HTML. Only BookingForm and MobileNav ship JavaScript.
+
+// Structured data so search engines can show the clinic in local results
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Physiotherapy",
+  name: content.site.name,
+  description: content.site.description,
+  url: content.site.url,
+  image: new URL(content.hero.photo, content.site.url).href,
+  telephone: content.contact.phone,
+  email: content.contact.email,
+  address: content.contact.address,
+};
 
 export default function Home() {
-  const adRef = useRef<HTMLInputElement>(null);
-  const telRef = useRef<HTMLInputElement>(null);
-  const hizmetRef = useRef<HTMLSelectElement>(null);
-  const notRef = useRef<HTMLTextAreaElement>(null);
-
-  const handleWhatsApp = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const ad = adRef.current?.value || '-';
-    const tel = telRef.current?.value || '-';
-    const hizmet = hizmetRef.current?.value || '-';
-    const notVal = notRef.current?.value || '-';
-    
-    const text = `Merhaba, randevu almak istiyorum.\n\n*Ad Soyad:* ${ad}\n*Telefon:* ${tel}\n*Hizmet:* ${hizmet}\n*Not:* ${notVal}`;
-    window.open(`https://wa.me/${content.contact.whatsappPhone}?text=${encodeURIComponent(text)}`, '_blank');
-  };
-
-  const handleEmail = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const ad = adRef.current?.value || '-';
-    const tel = telRef.current?.value || '-';
-    const hizmet = hizmetRef.current?.value || '-';
-    const notVal = notRef.current?.value || '-';
-    
-    const subject = 'Randevu Talebi - ' + ad;
-    const body = 'Ad Soyad: ' + ad
-      + '\nTelefon: ' + tel
-      + '\nHizmet: ' + hizmet
-      + '\nNot: ' + notVal;
-      
-    window.location.href = `mailto:${content.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
+  const { ui } = content;
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        // Escape "<" so content can never close the script tag
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      />
+
       <header>
         <div className="wrap">
           <nav>
-            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo(0, 0); }} className="logo">
-              <img src="/logos/sinem-full.svg" alt="Fizyoterapist Nursinem Yıldız" className="header-img" />
+            <a href="#" className="logo">
+              <img src="/logos/sinem-full.svg" alt={content.site.name} className="header-img" />
             </a>
             <div className="nav-links">
-              <a href="#hizmetler">Hizmetler</a>
-              <a href="#yaklasim">Yaklaşımımız</a>
-              <a href="#randevu">Randevu</a>
-              <a href="#iletisim">İletişim</a>
+              {content.nav.map((item) => (
+                <a key={item.href} href={item.href}>{item.label}</a>
+              ))}
             </div>
-            <a href="#randevu" className="btn btn-primary">Randevu al</a>
+            <div className="nav-actions">
+              <a href="#randevu" className="btn btn-primary">{ui.bookCta}</a>
+              <MobileNav items={content.nav} label={ui.menu} />
+            </div>
           </nav>
         </div>
       </header>
@@ -67,13 +59,13 @@ export default function Home() {
               ))}
             </div>
             <div className="hero-ctas">
-              <a href="#randevu" className="btn btn-primary">Randevu al</a>
-              <a href="#hizmetler" className="btn btn-outline">Hizmetleri gör</a>
+              <a href="#randevu" className="btn btn-primary">{ui.bookCta}</a>
+              <a href="#hizmetler" className="btn btn-outline">{ui.servicesCta}</a>
             </div>
           </div>
           <div className="hero-visual">
             <div className="photo-frame">
-              <img src="/photos/fzt.jpeg" alt={content.hero.eyebrow} />
+              <img src={content.hero.photo} alt={content.hero.photoName} />
               <div className="photo-tag"><strong>{content.hero.photoName}</strong>{content.hero.photoTitle}</div>
             </div>
           </div>
@@ -89,7 +81,7 @@ export default function Home() {
           <div className="service-grid">
             {content.services.items.map((item) => (
               <div key={item.id} className="service-card">
-                <img src={item.icon} alt={item.title} className="icon" />
+                <img src={item.icon} alt="" className="icon" />
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
@@ -126,44 +118,12 @@ export default function Home() {
               <p>{content.booking.description}</p>
             </div>
             <div className="contact-lines">
-              <div className="contact-line"><img src="/icons/location.svg" alt="Adres" /> {content.contact.address}</div>
-              <div className="contact-line"><img src="/icons/phone.svg" alt="Telefon" /> {content.contact.phone}</div>
-              <div className="contact-line"><img src="/icons/clock.svg" alt="Çalışma Saatleri" /> {content.contact.hours}</div>
+              <div className="contact-line"><img src="/icons/location.svg" alt={ui.contactLabels.address} /> {content.contact.address}</div>
+              <div className="contact-line"><img src="/icons/phone.svg" alt={ui.contactLabels.phone} /> {content.contact.phone}</div>
+              <div className="contact-line"><img src="/icons/clock.svg" alt={ui.contactLabels.hours} /> {content.contact.hours}</div>
             </div>
           </div>
-          <div className="form-card">
-            <div className="form-row">
-              <div className="field">
-                <label htmlFor="ad">Ad Soyad</label>
-                <input id="ad" type="text" placeholder="Adınız Soyadınız" ref={adRef} />
-              </div>
-              <div className="field">
-                <label htmlFor="tel">Telefon</label>
-                <input id="tel" type="tel" placeholder="05XX XXX XX XX" ref={telRef} />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="field full">
-                <label htmlFor="hizmet">Hizmet</label>
-                <select id="hizmet" ref={hizmetRef}>
-                  {content.services.items.map(item => (
-                    <option key={item.id}>{item.title}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="field full">
-                <label htmlFor="not">Not (opsiyonel)</label>
-                <textarea id="not" rows={3} placeholder="Şikayetiniz hakkında kısa bilgi verin" ref={notRef}></textarea>
-              </div>
-            </div>
-            <div className="form-actions">
-              <a href="#" onClick={handleWhatsApp} className="btn btn-whatsapp">WhatsApp'tan Gönder</a>
-              <a href="#" onClick={handleEmail} className="btn btn-primary">E-posta ile Gönder</a>
-            </div>
-            <p className="form-note">Butonlardan birine tıkladığınızda ilgili uygulama formdaki bilgilerle açılır.</p>
-          </div>
+          <BookingForm />
         </div>
       </section>
 
@@ -178,41 +138,46 @@ export default function Home() {
         <div className="wrap">
           <div className="footer-grid">
             <div>
-              <img src="/logos/sinem-full-white.svg" alt="Fizyoterapist Nursinem Yıldız" className="footer-img" />
-              <p style={{ maxWidth: '280px', fontSize: '14px', color: 'rgba(253,252,250,0.6)' }}>{content.footer.description}</p>
+              <img src="/logos/sinem-full-white.svg" alt={content.site.name} className="footer-img" />
+              <p className="footer-desc">{content.footer.description}</p>
             </div>
             <div>
-              <h6>Menü</h6>
+              <h6>{ui.footer.menu}</h6>
               <div className="foot-links">
-                <a href="#hizmetler">Hizmetler</a>
-                <a href="#yaklasim">Yaklaşımımız</a>
-                <a href="#randevu">Randevu</a>
+                {content.nav.map((item) => (
+                  <a key={item.href} href={item.href}>{item.label}</a>
+                ))}
               </div>
             </div>
             <div>
-              <h6>İletişim</h6>
+              <h6>{ui.footer.contact}</h6>
               <div className="foot-links">
-                <a href={`tel:${content.contact.phone.replace(/\s+/g, '')}`}>{content.contact.phone}</a>
+                <a href={`tel:${content.contact.phone.replace(/\s+/g, "")}`}>{content.contact.phone}</a>
                 <a href={`mailto:${content.contact.email}`}>{content.contact.email}</a>
-                <a href="https://maps.google.com/?q=Fizyoterapist+Nursinem+Yıldız+Kozan+Fizik+Tedavi" target="_blank" rel="noopener noreferrer">{content.contact.address}</a>
+                <a href={content.contact.mapsUrl} target="_blank" rel="noopener noreferrer">{content.contact.address}</a>
               </div>
             </div>
           </div>
-          <div className="foot-bottom" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', flexWrap: 'wrap', gap: '12px' }}>
-              <span>Son güncelleme: {new Date().toLocaleDateString('tr-TR')}</span>
+          <div className="foot-bottom">
+            <div className="foot-row">
+              <span>{ui.footer.lastUpdated}: {content.site.lastUpdated}</span>
               <span>{content.footer.editorInfo}</span>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', flexWrap: 'wrap', gap: '12px' }}>
-              <span>© Özel Sağlık Meslek Hizmet Birimi Fizyoterapist Nursinem Yıldız</span>
-              <span>Tüm hakları saklıdır</span>
+            <div className="foot-row">
+              <span>{ui.footer.copyright}</span>
+              <span>{ui.footer.rights}</span>
             </div>
+            {content.footer.developerCredit && (
+              <div className="foot-row">
+                <a href={content.footer.developerUrl} target="_blank" rel="noopener">{content.footer.developerCredit}</a>
+              </div>
+            )}
           </div>
         </div>
       </footer>
 
-      <a className="wa-float" href={`https://wa.me/${content.contact.whatsappPhone}?text=${encodeURIComponent(content.contact.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geç">
-        <img src="/icons/whatsapp.svg" alt="WhatsApp" style={{ width: 30, height: 30 }} />
+      <a className="wa-float" href={`https://wa.me/${content.contact.whatsappPhone}?text=${encodeURIComponent(content.contact.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" aria-label={ui.whatsappFloat}>
+        <img src="/icons/whatsapp.svg" alt="" style={{ width: 30, height: 30 }} />
       </a>
     </>
   );
