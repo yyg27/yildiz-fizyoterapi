@@ -1,4 +1,28 @@
 {
+  "site": {
+    "name": "Fizyoterapist Nursinem Yıldız",
+    "description": "Kozan Fizik Tedavi",
+    "url": "https://yildiz-fizyoterapi.vercel.app",
+    "lastUpdated": "09.09.2026"
+  },
+  "nav": [
+    {
+      "label": "Hizmetler",
+      "href": "#hizmetler"
+    },
+    {
+      "label": "Yaklaşımımız",
+      "href": "#yaklasim"
+    },
+    {
+      "label": "Bilgi Al",
+      "href": "#randevu"
+    },
+    {
+      "label": "İletişim",
+      "href": "#iletisim"
+    }
+  ],
   "hero": {
     "eyebrow": "Fzt. Nursinem Yıldız",
     "photoName": "Nursinem Yıldız",
@@ -12,7 +36,8 @@
       "Ortopedik Rehabilitasyon",
       "Manuel Terapi",
       "Reformer & Mat Pilates"
-    ]
+    ],
+    "photo": "/photos/fzt.jpeg"
   },
   "services": {
     "label": "Hizmetlerimiz",
@@ -95,8 +120,8 @@
     ]
   },
   "booking": {
-    "title": "Randevunuzu oluşturun",
-    "description": "Formu doldurun, size en kısa sürede dönüş yapıp uygun seans saatini birlikte belirleyelim."
+    "title": "Bilgi almak için bize ulaşın",
+    "description": "Formu doldurun, sorularınızı yanıtlamak için size en kısa sürede dönüş yapalım."
   },
   "contact": {
     "address": "Karacaoğlan, 11119 Sk. Zemin Kat No:2AB, Kozan/Adana",
@@ -104,7 +129,8 @@
     "hours": "Pazartesi–Cuma, 09:00–19:00, Cumartesi, 09:00–17:00",
     "email": "fzt.nursinemyildiz@gmail.com",
     "whatsappPhone": "905436315957",
-    "whatsappMessage": "Merhaba, randevu almak istiyorum"
+    "whatsappMessage": "Merhaba, bilgi almak istiyorum",
+    "mapsUrl": "https://maps.google.com/?q=Fizyoterapist+Nursinem+Yıldız+Kozan+Fizik+Tedavi"
   },
   "testimonial": {
     "quote": "Hareket varsa, yaşam vardır.",
@@ -113,6 +139,40 @@
   "footer": {
     "description": "Bu sitedeki yazılar tamamen bilgilendirme amaçlıdır. Tıbbi teşhis ve tedavi olarak kullanılmamalıdır.",
     "editorInfo": "Site içeriğinden sorumlu: Fzt. Nursinem Yıldız — fzt.nursinemyildiz@gmail.com",
-    "developerCredit": "Bu site Yusuf Yiğit tarafından geliştirilmiştir."
+    "developerCredit": "YYG27™",
+    "developerUrl": "https://yyg27.runs-on.dev/"
+  },
+  "ui": {
+    "menu": "Menü",
+    "bookCta": "Bilgi al",
+    "servicesCta": "Hizmetleri gör",
+    "form": {
+      "name": "Ad Soyad",
+      "namePlaceholder": "Adınız Soyadınız",
+      "phone": "Telefon",
+      "phonePlaceholder": "05XX XXX XX XX",
+      "service": "Hizmet",
+      "note": "Not",
+      "optional": "(opsiyonel)",
+      "notePlaceholder": "Şikayetiniz hakkında kısa bilgi verin",
+      "sendWhatsApp": "WhatsApp'tan Gönder",
+      "sendEmail": "E-posta ile Gönder",
+      "hint": "Butonlardan birine tıkladığınızda ilgili uygulama formdaki bilgilerle açılır.",
+      "messageIntro": "Merhaba, bilgi almak istiyorum.",
+      "emailSubject": "Bilgi Talebi"
+    },
+    "contactLabels": {
+      "address": "Adres",
+      "phone": "Telefon",
+      "hours": "Çalışma Saatleri"
+    },
+    "footer": {
+      "menu": "Menü",
+      "contact": "İletişim",
+      "lastUpdated": "Son güncelleme",
+      "copyright": "© Özel Sağlık Meslek Hizmet Birimi Fizyoterapist Nursinem Yıldız",
+      "rights": "Tüm hakları saklıdır"
+    },
+    "whatsappFloat": "WhatsApp ile iletişime geç"
   }
 }
