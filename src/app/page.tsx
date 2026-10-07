@@ -13,10 +13,20 @@ const jsonLd = {
   name: content.site.name,
   description: content.site.description,
   url: content.site.url,
-  image: new URL(content.hero.photo, content.site.url).href,
-  telephone: content.contact.phone,
+  image: new URL("/opengraph-image.png", content.site.url).href,
+  telephone: `+${content.contact.whatsappPhone}`,
   email: content.contact.email,
-  address: content.contact.address,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Karacaoğlan, 11119 Sk. Zemin Kat No:2AB",
+    addressLocality: "Kozan",
+    addressRegion: "Adana",
+    addressCountry: "TR",
+  },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "19:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "17:00" },
+  ],
 };
 
 export default function Home() {

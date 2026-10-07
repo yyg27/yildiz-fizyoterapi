@@ -1,7 +1,8 @@
 {
   "site": {
     "name": "Fizyoterapist Nursinem Yıldız",
-    "description": "Kozan Fizik Tedavi",
+    "title": "Fizyoterapist Nursinem Yıldız | Kozan, Adana",
+    "description": "Kozan, Adana'da fizyoterapi, manuel terapi, ortopedik rehabilitasyon ve reformer pilates hizmeti; her danışan için bireysel değerlendirmeye dayalı program.",
     "url": "https://yildiz-fizyoterapi.vercel.app",
     "lastUpdated": "09.09.2026"
   },
@@ -11,7 +12,7 @@
       "href": "#hizmetler"
     },
     {
-      "label": "Yaklaşımımız",
+      "label": "Süreç",
       "href": "#yaklasim"
     },
     {
@@ -47,7 +48,7 @@
         "id": "ortopedik",
         "icon": "/icons/services/ortho.svg",
         "title": "Ortopedik Rehabilitasyon",
-        "description": "Ameliyat sonrası ve eklem, kas iskelet sistemi problemlerinde iyileşme sürecinizi destekliyoruz."
+        "description": "Ameliyat sonrası ve eklem, kas iskelet sistemi problemlerinde iyileşme sürecine yönelik çalışmalar yapılır."
       },
       {
         "id": "spor",
@@ -59,7 +60,7 @@
         "id": "manuel",
         "icon": "/icons/services/manual.svg",
         "title": "Manuel Terapi",
-        "description": "Elle uygulanan tekniklerle eklem hareketliliğini ve doku esnekliğini geri kazandırıyoruz."
+        "description": "Elle uygulanan tekniklerle eklem hareketliliğinin ve doku esnekliğinin yeniden kazanılması amaçlanır."
       },
       {
         "id": "norolojik",
@@ -71,51 +72,51 @@
         "id": "reformer-pilates",
         "icon": "/icons/services/pil_refor.svg",
         "title": "Reformer Pilates",
-        "description": "Reformer aletiyle yapılan, kasları güçlendiren ve vücut farkındalığını artıran pilates seansları."
+        "description": "Reformer aletinin ayarlanabilir yay direnciyle, her hareketin kontrollü biçimde çalışıldığı pilates seansları uygulanır."
       },
       {
         "id": "mat-pilates",
         "icon": "/icons/services/pil_mat.svg",
         "title": "Mat Pilates",
-        "description": "Mat üzerinde yapılan, kasları güçlendiren ve vücut farkındalığını artıran pilates seansları."
+        "description": "Alet kullanmadan, vücut ağırlığıyla mat üzerinde yapılan ve evde de sürdürülebilecek hareketlere yer verilen pilates seansları uygulanır."
       },
       {
         "id": "klinik-masaj",
         "icon": "/icons/services/massage.svg",
         "title": "Medikal Masaj",
-        "description": "Profesyonel masaj teknikleriyle kas gerginliğini ve ağrıları hafifletiyoruz."
+        "description": "Profesyonel masaj teknikleriyle kas gerginliğinin ve ağrıların hafifletilmesi amaçlanır."
       },
       {
         "id": "klinik-egzersiz",
         "icon": "/icons/services/exercise.svg",
         "title": "Terapötik Egzersiz",
-        "description": "Profesyonel egzersiz programlarıyla hareket yeteneğinizi ve dayanıklılığınızı artırıyoruz."
+        "description": "Profesyonel egzersiz programlarıyla hareket yeteneğinin ve dayanıklılığın geliştirilmesine yönelik çalışmalar yapılır."
       }
     ]
   },
   "approach": {
     "title": "Süreç nasıl işliyor",
-    "description": "İlk görüşmeden takip seansına kadar her adımda size özel bir yol haritası izliyoruz.",
+    "description": "İlk görüşmeden takip seansına kadar her adımda size özel bir yol haritası izlenir.",
     "steps": [
       {
         "num": "01",
         "title": "Değerlendirme",
-        "description": "Ağrınızı, hareket kısıtlılığınızı ve günlük yaşamınızı etkileyen faktörleri birlikte inceliyoruz."
+        "description": "Ağrınız, hareket kısıtlılığınız ve günlük yaşamınızı etkileyen faktörler birlikte incelenir."
       },
       {
         "num": "02",
         "title": "Kişisel program",
-        "description": "Değerlendirme sonuçlarına göre hedeflerinize uygun bir fizyoterapi programı oluşturuyoruz."
+        "description": "Değerlendirme sonuçlarına göre hedeflerinize uygun bir fizyoterapi programı oluşturulur."
       },
       {
         "num": "03",
         "title": "Uygulama",
-        "description": "Planlanan program doğrultusunda manuel terapi, egzersiz ve fizyoterapi yöntemlerini bir arada uyguluyoruz."
+        "description": "Planlanan program doğrultusunda manuel terapi, egzersiz ve fizyoterapi yöntemleri bir arada uygulanır."
       },
       {
         "num": "04",
         "title": "Takip",
-        "description": "İlerlemenizi düzenli olarak ölçüp programı gerektiğinde yeniden şekillendiriyoruz."
+        "description": "İlerlemeniz düzenli olarak ölçülür, program gerektiğinde yeniden şekillendirilir."
       }
     ]
   },
