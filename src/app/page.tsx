@@ -3,8 +3,9 @@ import content from "@/data/content.json";
 import BookingForm from "@/components/BookingForm";
 import MobileNav from "@/components/MobileNav";
 import ScrollReveal from "@/components/ScrollReveal";
+import ScrollSpy from "@/components/ScrollSpy";
 
-// Server component: rendered to static HTML. Only BookingForm and MobileNav ship JavaScript.
+// Server component: rendered to static HTML. Only BookingForm, MobileNav and the scroll helpers ship JavaScript.
 
 // Structured data so search engines can show the clinic in local results
 const jsonLd = {
@@ -195,6 +196,7 @@ export default function Home() {
       </footer>
 
       <ScrollReveal />
+      <ScrollSpy />
 
       <a className="wa-float" href={`https://wa.me/${content.contact.whatsappPhone}?text=${encodeURIComponent(content.contact.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" aria-label={ui.whatsappFloat}>
         <img src="/icons/whatsapp.svg" alt="" style={{ width: 30, height: 30 }} />
