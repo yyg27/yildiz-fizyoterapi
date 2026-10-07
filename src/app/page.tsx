@@ -1,6 +1,7 @@
 import content from "@/data/content.json";
 import BookingForm from "@/components/BookingForm";
 import MobileNav from "@/components/MobileNav";
+import ScrollReveal from "@/components/ScrollReveal";
 
 // Server component: rendered to static HTML. Only BookingForm and MobileNav ship JavaScript.
 
@@ -175,6 +176,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <ScrollReveal />
 
       <a className="wa-float" href={`https://wa.me/${content.contact.whatsappPhone}?text=${encodeURIComponent(content.contact.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" aria-label={ui.whatsappFloat}>
         <img src="/icons/whatsapp.svg" alt="" style={{ width: 30, height: 30 }} />
