@@ -1,16 +1,27 @@
 "use client";
 
+import { useState } from "react";
 import content from "@/data/content.json";
 
 // The only interactive part of the page. Browser validation (required/pattern) blocks empty requests;
 // the clicked button (submitter) decides between WhatsApp and email.
+// Health details only come in through the note, so explicit consent (KVKK art. 6) is required
+// only when the note is filled: a plain information request never depends on consent.
 export default function BookingForm() {
   const { form } = content.ui;
+  const [noteFilled, setNoteFilled] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const value = (key: string) => String(data.get(key) ?? "").trim() || "-";
+
+    const consent = e.currentTarget.elements.namedItem("consent") as HTMLInputElement;
+    if (value("note") !== "-" && !consent.checked) {
+      consent.required = true;
+      consent.reportValidity();
+      return;
+    }
 
     const name = value("name");
     const rows: [string, string][] = [
@@ -56,14 +67,18 @@ export default function BookingForm() {
       <div className="form-row">
         <div className="field full">
           <label htmlFor="note">{form.note} {form.optional}</label>
-          <textarea id="note" name="note" rows={3} placeholder={form.notePlaceholder}></textarea>
+          <textarea id="note" name="note" rows={3} placeholder={form.notePlaceholder} onChange={(e) => setNoteFilled(e.target.value.trim() !== "")}></textarea>
         </div>
       </div>
+      <label className="consent">
+        <input type="checkbox" name="consent" required={noteFilled} />
+        <span>{form.consent}</span>
+      </label>
       <div className="form-actions">
         <button type="submit" name="via" value="whatsapp" className="btn btn-whatsapp">{form.sendWhatsApp}</button>
         <button type="submit" name="via" value="email" className="btn btn-primary">{form.sendEmail}</button>
       </div>
-      <p className="form-note">{form.hint}</p>
+      <p className="form-note">{form.hint} <a href="/kvkk" target="_blank" rel="noopener">{form.kvkkLink}</a></p>
     </form>
   );
 }

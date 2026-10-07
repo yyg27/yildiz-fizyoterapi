@@ -1,3 +1,4 @@
+import Image from "next/image";
 import content from "@/data/content.json";
 import BookingForm from "@/components/BookingForm";
 import MobileNav from "@/components/MobileNav";
@@ -66,7 +67,7 @@ export default function Home() {
           </div>
           <div className="hero-visual">
             <div className="photo-frame">
-              <img src={content.hero.photo} alt={content.hero.photoName} />
+              <Image src={content.hero.photo} alt={content.hero.photoName} fill priority sizes="(max-width: 860px) 100vw, 460px" />
               <div className="photo-tag"><strong>{content.hero.photoName}</strong>{content.hero.photoTitle}</div>
             </div>
           </div>
@@ -166,6 +167,12 @@ export default function Home() {
             </div>
             <div className="foot-row">
               <span>{ui.footer.copyright}</span>
+              <span className="foot-legal">
+                <a href="/kvkk">{content.kvkk.title}</a>
+                <a href="/gizlilik">{content.privacy.title}</a>
+              </span>
+            </div>
+            <div className="foot-row">
               <span>{ui.footer.rights}</span>
             </div>
             {content.footer.developerCredit && (

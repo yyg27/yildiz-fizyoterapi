@@ -163,9 +163,12 @@ a.contact-line:hover{text-decoration:underline; text-underline-offset:3px;} /* s
   outline:none; border-color:var(--sage-deep); box-shadow:0 0 0 1px var(--sage-deep);
 }
 .field.full{grid-column:1/-1;}
+.consent{display:flex; align-items:flex-start; gap:10px; font-size:13px; line-height:1.5; color:var(--ink-soft); cursor:pointer;}
+.consent input{margin-top:3px; flex-shrink:0; width:16px; height:16px; accent-color:var(--sage-deep);}
 .form-actions{display:flex; gap:12px; margin-top:16px;}
 .form-actions .btn{flex:1; text-align:center;}
 .form-note{font-size:13px; color:var(--ink-soft); margin-top:14px;}
+.form-note a{display:block; margin-top:6px; text-decoration:underline;}
 
 /* testimonial */
 .testimonial{padding:90px 0; text-align:center;}
@@ -187,6 +190,16 @@ footer h6{color:var(--white); font-size:14px; font-weight:600; margin-bottom:16p
 .footer-desc{max-width:280px; font-size:14px; color:rgba(253,252,250,0.6);}
 .foot-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;}
 .foot-row a:hover{color:var(--pink);}
+.legal{padding-top:48px; padding-bottom:64px; max-width:760px;}
+.legal h1{font-size:36px; margin:24px 0 20px;}
+.legal p{margin-bottom:16px; color:var(--ink-soft);}
+.legal h2{font-size:22px; margin:32px 0 12px;}
+.legal ul{margin:0 0 16px 20px; color:var(--ink-soft); list-style:disc;}
+.legal li{margin-bottom:6px;}
+.legal > a{text-decoration:underline;}
+.legal-nav{display:flex; flex-wrap:wrap; justify-content:flex-start; padding:0; gap:8px 20px; margin-top:20px; font-size:14px; color:var(--ink-soft);}
+.legal-nav a[aria-current="page"]{color:var(--ink); font-weight:600; text-decoration:underline; text-underline-offset:3px;}
+.foot-legal{display:flex; flex-wrap:wrap; gap:8px 20px;}
 .foot-bottom{display:flex; flex-direction:column; gap:8px; padding-top:24px; font-size:13px; color:rgba(253,252,250,0.5);}
 
 /* whatsapp floating button */

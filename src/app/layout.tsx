@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     siteName: content.site.name,
     locale: "tr_TR",
     type: "website",
-    images: [content.hero.photo],
   },
 };
 
