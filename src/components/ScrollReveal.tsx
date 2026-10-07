@@ -2,11 +2,11 @@
 
 import { useEffect } from "react";
 
-// Elements that fade up when they scroll into view
+// Blocks that fade up when they scroll into view. Whole groups (all service cards, the whole
+// booking section) reveal together; per-item reveals looked choppy on mobile's single column.
 const SELECTOR = [
-  ".section-head", ".service-card", ".approach-grid > div", ".step",
-  ".booking-header", ".contact-lines", ".form-card",
-  ".testimonial blockquote", ".testimonial cite",
+  ".section-head", ".service-grid", ".approach-grid > div",
+  ".booking-grid", ".testimonial .wrap",
 ].join(", ");
 
 // Scroll reveal that works in every browser (CSS scroll timelines aren't in Firefox yet).
