@@ -145,6 +145,7 @@ nav{
 .booking-header p{color:rgba(253,252,250,0.82); font-size:16px; max-width:380px; margin-bottom:28px;}
 .contact-line{display:flex; align-items:flex-start; gap:12px; font-size:15px; margin-bottom:12px; color:rgba(253,252,250,0.92);}
 .contact-line img{margin-top:4px;}
+a.contact-line:hover{color:var(--pink);}
 .form-card{background:var(--white); color:var(--ink); padding:36px; border-radius:2px;}
 .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;}
 .field{display:flex; flex-direction:column; gap:6px;}

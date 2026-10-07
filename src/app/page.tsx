@@ -118,8 +118,8 @@ export default function Home() {
               <p>{content.booking.description}</p>
             </div>
             <div className="contact-lines">
-              <div className="contact-line"><img src="/icons/location.svg" alt={ui.contactLabels.address} /> {content.contact.address}</div>
-              <div className="contact-line"><img src="/icons/phone.svg" alt={ui.contactLabels.phone} /> {content.contact.phone}</div>
+              <a className="contact-line" href={content.contact.mapsUrl} target="_blank" rel="noopener noreferrer"><img src="/icons/location.svg" alt={ui.contactLabels.address} /> {content.contact.address}</a>
+              <a className="contact-line" href={`tel:${content.contact.phone.replace(/\s+/g, "")}`}><img src="/icons/phone.svg" alt={ui.contactLabels.phone} /> {content.contact.phone}</a>
               <div className="contact-line"><img src="/icons/clock.svg" alt={ui.contactLabels.hours} /> {content.contact.hours}</div>
             </div>
           </div>
