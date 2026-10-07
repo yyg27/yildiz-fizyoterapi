@@ -175,7 +175,9 @@ nav{
 .testimonial cite{font-style:normal; font-size:14px; color:var(--ink-soft);}
 
 /* footer */
-footer{background:var(--ink); color:rgba(253,252,250,0.82); padding:56px 0 28px;}
+footer{background:var(--ink); color:rgba(253,252,250,0.82); padding:56px 0 28px; position:relative; overflow:hidden;}
+footer::before{content:""; position:absolute; inset:0; background:url(/patterns/footer-design.svg) center/cover no-repeat; opacity:0.06; pointer-events:none;}
+footer > .wrap{position:relative;}
 .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid rgba(253,252,250,0.14);}
 footer h5{font-family:serif; color:var(--white); font-size:20px; margin-bottom:12px;}
 footer .foot-links{display:flex; flex-direction:column; gap:10px; font-size:14.5px;}
