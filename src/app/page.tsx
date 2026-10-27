@@ -19,16 +19,20 @@ const jsonLd = {
   email: content.contact.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Karacaoğlan, 11119 Sk. Zemin Kat No:2AB",
-    addressLocality: "Kozan",
-    addressRegion: "Adana",
+    streetAddress: content.contact.address.street,
+    addressLocality: content.contact.address.city,
+    addressRegion: content.contact.address.region,
     addressCountry: "TR",
   },
-  openingHoursSpecification: [
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "19:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "17:00" },
-  ],
+  openingHoursSpecification: content.contact.hours.map((h) => ({
+    "@type": "OpeningHoursSpecification", dayOfWeek: h.schemaDays, opens: h.opens, closes: h.closes,
+  })),
 };
+
+// Display strings built from the same data as the structured data above, so they can't drift apart
+const { street, city, region } = content.contact.address;
+const address = `${street}, ${city}/${region}`;
+const hours = content.contact.hours.map((h) => `${h.days}, ${h.opens}–${h.closes}`).join(", ");
 
 export default function Home() {
   const { ui } = content;
@@ -131,9 +135,9 @@ export default function Home() {
               <p>{content.booking.description}</p>
             </div>
             <div className="contact-lines">
-              <a className="contact-line" href={content.contact.mapsUrl} target="_blank" rel="noopener noreferrer"><img src="/icons/location.svg" alt={ui.contactLabels.address} /> {content.contact.address}</a>
+              <a className="contact-line" href={content.contact.mapsUrl} target="_blank" rel="noopener noreferrer"><img src="/icons/location.svg" alt={ui.contactLabels.address} /> {address}</a>
               <a className="contact-line" href={`tel:${content.contact.phone.replace(/\s+/g, "")}`}><img src="/icons/phone.svg" alt={ui.contactLabels.phone} /> {content.contact.phone}</a>
-              <div className="contact-line"><img src="/icons/clock.svg" alt={ui.contactLabels.hours} /> {content.contact.hours}</div>
+              <div className="contact-line"><img src="/icons/clock.svg" alt={ui.contactLabels.hours} /> {hours}</div>
             </div>
           </div>
           <BookingForm />
@@ -167,7 +171,7 @@ export default function Home() {
               <div className="foot-links">
                 <a href={`tel:${content.contact.phone.replace(/\s+/g, "")}`}>{content.contact.phone}</a>
                 <a href={`mailto:${content.contact.email}`}>{content.contact.email}</a>
-                <a href={content.contact.mapsUrl} target="_blank" rel="noopener noreferrer">{content.contact.address}</a>
+                <a href={content.contact.mapsUrl} target="_blank" rel="noopener noreferrer">{address}</a>
               </div>
             </div>
           </div>

@@ -51,7 +51,7 @@ export default function BookingForm() {
         </div>
         <div className="field">
           <label htmlFor="phone">{form.phone}</label>
-          <input id="phone" name="phone" type="tel" placeholder={form.phonePlaceholder} autoComplete="tel" required pattern="[0-9 +()\-]{10,}" />
+          <input id="phone" name="phone" type="tel" placeholder={form.phonePlaceholder} autoComplete="tel" required pattern="[0-9 +\(\)\-]{10,}" />
         </div>
       </div>
       <div className="form-row">

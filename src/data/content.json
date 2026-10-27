@@ -125,9 +125,16 @@
     "description": "Formu doldurun, sorularınızı yanıtlamak için size en kısa sürede dönüş yapalım."
   },
   "contact": {
-    "address": "Karacaoğlan, 11119 Sk. Zemin Kat No:2AB, Kozan/Adana",
+    "address": {
+      "street": "Karacaoğlan, 11119 Sk. Zemin Kat No:2AB",
+      "city": "Kozan",
+      "region": "Adana"
+    },
     "phone": "0543 631 5957",
-    "hours": "Pazartesi–Cuma, 09:00–19:00, Cumartesi, 09:00–17:00",
+    "hours": [
+      { "days": "Pazartesi–Cuma", "schemaDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00" },
+      { "days": "Cumartesi", "schemaDays": ["Saturday"], "opens": "09:00", "closes": "17:00" }
+    ],
     "email": "fzt.nursinemyildiz@gmail.com",
     "whatsappPhone": "905436315957",
     "whatsappMessage": "Merhaba, bilgi almak istiyorum",
